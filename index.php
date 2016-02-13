@@ -10,7 +10,7 @@
     <form action='index.php' method='GET'>
     
         <label for='word_count'>How many words do you want in your password?</label>
-        <input type='text' name=word_count>
+        <input type='text' name='word_count'>
         <br>
         
         <input type='checkbox' name='number_check'>
