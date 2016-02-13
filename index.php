@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Mason Tan P2 - xkcd Password Generator</title>
+    <?php require 'logic.php' ?>
 </head>
 <body>
 
