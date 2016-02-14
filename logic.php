@@ -5,20 +5,26 @@
     $password = "";
     $error = "";
     
-    // Check if the word count is between 2 and 9 in order to generate password
-    if ($_GET['word_count'] >= 2 AND  $_GET['word_count'] <= 9) {
+    if ($_GET) {
         
-        // Get an array of random keys in the word list
-        $password_list = array_rand($word_list, $_GET['word_count']);
-        
-        // Create password from the array of random keys
-        foreach ($password_list as $key => $value) {
-            $password .= $word_list[$value]." ";
+        // Check if the word count is between 2 and 9 in order to generate password
+        if ($_GET['word_count'] >= 2 AND  $_GET['word_count'] <= 9) {
+            
+            // Get an array of random keys in the word list
+            $password_list = array_rand($word_list, $_GET['word_count']);
+            
+            // Create password from the array of random keys
+            foreach ($password_list as $key => $value) {
+                $password .= $word_list[$value]." ";
+            }
+            
+        }
+        else {
+            
+            $error = "Please enter a number between 2 and 9!";
+            
         }
         
-    }
-    else {
-        $error = "Please enter a number between 2 and 9!";
     }
     
 ?>
