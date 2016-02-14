@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     
     <?php require 'logic.php' ?>
     
@@ -14,14 +15,16 @@
 <body>
 
     <h1>Fruity xkcd Password Generator</h1>
+    <br>
     
-    <?php echo $password ?>
-    <br><br>
+    <h2> <?php echo $password ?> </h2>
+    <br>
     
-    <form action='index.php' method='GET'>
+    <form class='settings' action='index.php' method='GET'>
     
+        <br>
         <label for='word_count'>How many words do you want in your fruity password?</label>
-        <input type='text' name='word_count'>
+        <input type='text' name='word_count' maxlength='1'>
         <br>
         
         <input type='checkbox' name='number_check'>
@@ -32,10 +35,14 @@
         <label for='symbol_check'>Check if you want to add a symbol</label>
         <br>
         
-        <input type='submit' value='Generate Password!'>
-        <?php echo $error ?>
+        <br>
+        <input type='submit' class='btn btn-success' value='Generate Password!'>
+        <br>
         
+        <br>
+        <?php echo $error ?>
+            
     </form>
-    
+
 </body>
 </html>
