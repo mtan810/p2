@@ -18,6 +18,13 @@
                 $password .= $word_list[$value]." ";
             }
             
+            if (isset($_GET['number_check'])) {
+                
+                // Add a number between 0 and 9 to the password
+                $password .= rand(0, 9);
+                
+            }
+            
         }
         else {
             
