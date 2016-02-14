@@ -23,7 +23,7 @@
     <form class='settings' action='index.php' method='GET'>
     
         <br>
-        <label for='word_count'>How many words do you want in your fruity password?</label>
+        <label for='word_count'>How many words do you want in your fruity password? (Minimum:2, Maximum:9) </label>
         <input type='text' name='word_count' maxlength='1'>
         <br>
         
