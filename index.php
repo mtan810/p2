@@ -20,18 +20,22 @@
     <h2> <?php echo $password ?> </h2>
     <br>
     
-    <form class='settings' action='index.php' method='GET'>
+    <form class='settings' action='/' method='GET'>
     
         <br>
-        <label for='word_count'>How many words do you want in your fruity password? (Minimum:2, Maximum:9) </label>
-        <input type='text' name='word_count' class='word_count' maxlength='1' value='<?php if(isset($_GET['word_count'])) echo $_GET['word_count'] ?>'>
+        <div class='word_count_setting'>
+            <label for='word_count'>How many words do you want in your fruity password?</label>
+            <br>
+            <label for='word_count'>(Minimum:2, Maximum:9, Default:4)</label>
+            <input type='text' name='word_count' id='word_count' maxlength='1' value='<?php if(isset($_GET['word_count'])) echo $_GET['word_count'] ?>'>
+        </div>
         <br>
         
-        <input type='checkbox' name='number_check' <?php if(isset($_GET['number_check'])) echo 'checked'; ?>>
+        <input type='checkbox' name='number_check' id='number_check' <?php if(isset($_GET['number_check'])) echo 'checked'; ?>>
         <label for='number_check'>Check if you want to add a number</label>
         <br>
         
-        <input type='checkbox' name='symbol_check' <?php if(isset($_GET['symbol_check'])) echo 'checked'; ?>>
+        <input type='checkbox' name='symbol_check' id='symbol_check' <?php if(isset($_GET['symbol_check'])) echo 'checked'; ?>>
         <label for='symbol_check'>Check if you want to add a symbol</label>
         <br>
         

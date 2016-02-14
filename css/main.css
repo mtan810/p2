@@ -8,6 +8,6 @@ body {
     font-size:120%;
 }
 
-.word_count {
+#word_count {
     width: 30px;
 }
