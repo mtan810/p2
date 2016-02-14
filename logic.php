@@ -13,9 +13,15 @@
             $password_list = array_rand($word_list, $_GET['word_count']);
             
         }
+        
         else {
+        
+            // Check if the word count is not an empty value (random char or number not between 2 and 9)
+            if (!($_GET['word_count'] == '')) {
+                
+                $error = "Please enter a number between 2 and 9! Generating a random 4 word password.";
             
-            $error = "Please enter a number between 2 and 9! Generating a random 4 word password.";
+            }
             
             // Get an array of 4 random keys in the word list
             $password_list = array_rand($word_list, 4);
