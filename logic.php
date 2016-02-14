@@ -25,6 +25,13 @@
                 
             }
             
+            if (isset($_GET['symbol_check'])) {
+                
+                // Add an '@' symbol to the password
+                $password .= '@';
+                
+            }
+            
         }
         else {
             
