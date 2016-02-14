@@ -1,7 +1,6 @@
 <?php
     
     $word_list = Array('apple','banana','blackberry','blueberry','cherry','coconut','cranberry','grape','kiwi','lemon','lime','mango','melon','orange','peach','pear','pineapple','plum','rasberry','strawberry','watermelon');
-    
     $password = "";
     $error = "";
     
@@ -42,6 +41,19 @@
             // Add an '@' symbol to the password
             $password .= '@';
             
+        }
+        
+    }
+    else {
+        
+        // Get an array of 4 random keys in the word list
+        $password_list = array_rand($word_list, 4);
+        
+        // Create password from the array of random keys
+        foreach ($password_list as $key => $value) {
+            
+            $password .= $word_list[$value]." ";
+        
         }
         
     }
