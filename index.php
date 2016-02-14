@@ -6,11 +6,14 @@
 </head>
 <body>
 
-    <h1>xkcd Password Generator</h1>
+    <h1>Fruity xkcd Password Generator</h1>
+    
+    <?php echo $password ?>
+    <br><br>
     
     <form action='index.php' method='GET'>
     
-        <label for='word_count'>How many words do you want in your password?</label>
+        <label for='word_count'>How many words do you want in your fruity password?</label>
         <input type='text' name='word_count'>
         <br>
         
@@ -23,6 +26,7 @@
         <br>
         
         <input type='submit' value='Generate Password!'>
+        <?php echo $error ?>
         
     </form>
     
