@@ -24,14 +24,14 @@
     
         <br>
         <label for='word_count'>How many words do you want in your fruity password? (Minimum:2, Maximum:9) </label>
-        <input type='text' name='word_count' maxlength='1'>
+        <input type='text' name='word_count' maxlength='1' value='<?php if(isset($_GET['word_count'])) echo $_GET['word_count'] ?>'>
         <br>
         
-        <input type='checkbox' name='number_check'>
+        <input type='checkbox' name='number_check' <?php if(isset($_GET['number_check'])) echo 'checked'; ?>>
         <label for='number_check'>Check if you want to add a number</label>
         <br>
         
-        <input type='checkbox' name='symbol_check'>
+        <input type='checkbox' name='symbol_check' <?php if(isset($_GET['symbol_check'])) echo 'checked'; ?>>
         <label for='symbol_check'>Check if you want to add a symbol</label>
         <br>
         
