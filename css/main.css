@@ -1,8 +1,13 @@
 body {
     font-family:"Comic Sans", cursive, sans-serif;
     text-align:center;
+    background-color:pink;
 }
 
 .settings {
     font-size:120%;
+}
+
+.word_count {
+    width: 30px;
 }

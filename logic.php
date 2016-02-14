@@ -25,7 +25,9 @@
         
         // Create password from the array of random keys
         foreach ($password_list as $key => $value) {
+            
             $password .= $word_list[$value]." ";
+            
         }
         
         if (isset($_GET['number_check'])) {
